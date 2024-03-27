@@ -1,0 +1,30 @@
+.sidebar{
+    width: 18rem;font-size: 1.3rem;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar ul li{
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar ul li svg{
+    margin-right: 0.4rem;
+}
+
+.sidebar ul p{
+    font-size: 1.1rem;
+}
+
+.sidebar ul li{
+    margin: 1rem 0;
+}
+.sidebar ul li:hover{
+    background-color:aqua;
+}
+

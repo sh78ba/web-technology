@@ -1,23 +1,55 @@
-import logo from './logo.svg';
+// import { BrowserRouter, Route, Routes} from 'react-router-dom';
+// import './App.css';
+// import User from './User';
+// import Guard from './Guard';
+// import LoginPage from './component/LoginPage';
+// import { UserProvider } from './component/UserContext';
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//    <UserProvider> 
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path='/' element={<LoginPage/>} />
+//           {/* Guard */}
+//           <Route path='/guard/*' element={<Guard />} />
+//           {/* User */}
+//           <Route path='/user/*' element={<User />} />
+//           <Route path='*' element={<div>Page Not Found</div>} />
+//         </Routes>
+//       </BrowserRouter>
+//       </UserProvider>
+//     </div>
+//   );
+// }
+// export default App;
+
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
+import User from './User';
+import Guard from './Guard';
+import LoginPage from './component/LoginPage';
+import {  useUser } from './component/UserContext';
+ // Assuming you have a UserContext with a useUser hook
 
 function App() {
+  const { user } = useUser(); // Assuming isLoggedIn state is provided by the UserContext
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={ <LoginPage />} />
+            {/* Guard */}
+            <Route path='/guard/*' element={user ? <Guard /> : <Navigate to="/" />} />
+            {/* User */}
+            <Route path='/user/*' element={user ? <User /> : <Navigate to="/" />} />
+            <Route path='*' element={<div>Page Not Found</div>} />
+          </Routes>
+        </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,53 @@
+/* UpdateRoom.css */
+.update-room-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .building-info-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .building-info-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .building-info-item strong {
+    font-weight: bold;
+  }
+  
+  .building-info-item:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .building-info-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .update-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .update-button:hover {
+    background-color: #45a049;
+  }
+  

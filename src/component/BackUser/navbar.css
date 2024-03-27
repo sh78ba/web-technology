@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5 rem 1rem;
+   align-items: center;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav li{
+    justify-content: space-between;
+    margin: auto 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.nav li:hover{
+    background-color: aqua;
+}
+
+.logout-btn{
+    color: white;
+    background-color:#0fd2ff;
+}
