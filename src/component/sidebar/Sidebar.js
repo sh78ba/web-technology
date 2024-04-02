@@ -1,7 +1,7 @@
 import "./sidebar.css";
 
 import React from "react";
-import { BiSolidSchool } from "react-icons/bi";
+// import { BiSolidSchool } from "react-icons/bi";
 import { IoMdHome } from "react-icons/io";
 import { FaBuilding } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -12,10 +12,10 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li><BiSolidSchool />
+        {/* <li><BiSolidSchool />
           Staff Housing
           <p>National Institute of Technology,Warangal</p>
-        </li>
+        </li> */}
         <li onClick={()=>navigate("/user/dashboard")}><IoMdHome/>Dashboard</li>
         <li onClick={()=>navigate("/user/myquarters")}><FaBuilding />Your Quarters</li>
         <li onClick={()=>navigate("/user/requests")}><MdEmail />Requests</li>

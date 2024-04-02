@@ -20,9 +20,6 @@
     font-size: 1.3rem;
 }
 
-.nav li:hover{
-    background-color: aqua;
-}
 
 .logout-btn{
     color: white;

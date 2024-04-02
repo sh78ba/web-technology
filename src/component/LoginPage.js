@@ -55,6 +55,7 @@ const LoginPage = () => {
   };
 
   return (
+    <div className='login'>
     <div className="login-container"> 
       <h2>Login</h2>
       {error && <div className="error-message">{error}</div>}
@@ -80,6 +81,7 @@ const LoginPage = () => {
         </label>
       </div>
       <button onClick={handleLogin}>Login</button>
+    </div>
     </div>
   );
 };

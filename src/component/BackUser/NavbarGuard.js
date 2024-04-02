@@ -1,6 +1,5 @@
 import React from 'react'
 import { GiStairs } from "react-icons/gi";
-import { FaRegUser } from "react-icons/fa";
 import './navbar.css'
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
@@ -48,9 +47,7 @@ const handleLogout = () => {
             <li className='logout-btn' onClick={handleLogout}>  
                LogOut
             </li>
-            <li>
-            <FaRegUser />
-            </li>
+            
         </ul>
     </div>
     </div>

@@ -8,14 +8,14 @@ import Navbar from './component/navbar/Navbar';
 
 const User = () => {
   return (
-   <div>
+   <>
       <Navbar />
       <div className='container-wrap'>
         <Sidebar />
         <Maincontainer />
      
       </div>
-      </div>
+      </>
     
   );
 };

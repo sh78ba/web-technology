@@ -6,13 +6,9 @@ const AllList = () => {
   return (
     <div>
         <Requests />
-        {/* <Requests requestType ={"plumber"} />
-        <Requests requestType ={"changerequest"} />
-        <Requests requestType ={"others"} /> */}
         <ApplyRequest/>
    
-     
-
+    
     </div>
   )
 }

@@ -15,16 +15,16 @@ const Requests = ({ requestType }) => {
         const dbVal = await getDocs(value);
         const requestsData = dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id }));
 
-        let filteredRequests = requestsData;
+        let filteredRequests = requestsData.filter(request => request.status=== "pending");
         if (requestType) {
-          filteredRequests = requestsData.filter(request => request.requestType === requestType);
+          filteredRequests = filteredRequests.filter(request => request.requestType === requestType);
         }
         
-        setRequests(filteredRequests);
+        setRequests(filteredRequests.slice(0, 15));
 
         // Initialize status object with status from database for each request
         const initialStatus = {};
-        filteredRequests.forEach(request => {
+        requestsData.forEach(request => {
           initialStatus[request.id] = request.status;
         });
         setStatus(initialStatus);
@@ -82,7 +82,7 @@ const Requests = ({ requestType }) => {
                 <td>{request.message}</td>
                 <td>
                   <select value={status[request.id]} onChange={(e) => handleStatusChange(e, request.id)}>
-                    <option value="Pending">Pending</option>
+                    <option value="pending">Pending</option>
                     <option value="Done">Done</option>
                   </select>
                 </td>

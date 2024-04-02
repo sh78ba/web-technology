@@ -1,4 +1,4 @@
-.sidebar{
+/* .sidebar{
     width: 18rem;font-size: 1.3rem;
 }
 .sidebar ul{
@@ -27,4 +27,49 @@
 .sidebar ul li:hover{
     background-color:aqua;
 }
+ */
 
+ .sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar ul li svg {
+    margin-right: 10px;
+  }
+  
+  .sidebar ul li p {
+    margin-left: 10px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #555;
+    transform: translateX(5px); /* Move right on hover */
+  }
+  
+  /* Animation for smooth transition */
+  .sidebar ul li {
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    transform: scale(1.1); /* Scale up on hover */
+  }
+  
